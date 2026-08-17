@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export MONGODB_URI=mongodb://${db_ip}:27017/tictactoe
+
+cd tech603-sparta-app/app
+node seeds/seed.js
+pm2 start index.js --name index
